@@ -7,7 +7,7 @@ int main(int argc, char **argv)
 {
     const int MAX = 10;
     int primes[MAX], i;
-
+    primes[0] = 0; //Because the ++i condition of next loop is accessed *after* it finishes an iteration.
     /*TEST*/for(int i = 0; i < MAX;primes[i] = ++i);  //This Semi-Colon added
 		primesUpTo(MAX,primes); // Pointer to array will be copied but not the array)
 	return 0;
